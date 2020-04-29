@@ -22,10 +22,10 @@ public class robot : Agent
         rigball.velocity = Vector3.zero;
         rigball.angularVelocity = Vector3.zero;
 
-        Vector3 posrobot = new Vector3(Random.Range(-2, 2f), 0.1f, Random.Range(-2f, 0f));
+        Vector3 posrobot = new Vector3(Random.Range(-1f, 1f), 0.1f, Random.Range(-2f, 0f));
         transform.position = posrobot;
 
-        Vector3 posball = new Vector3(Random.Range(-2, 2f), 0.1f, Random.Range(1f, 2f));
+        Vector3 posball = new Vector3(Random.Range(-0.5f, 0.5f), 0.1f, Random.Range(1f, 2f));
         rigball.position = posball;
 
         ball.complete = false;
@@ -59,11 +59,11 @@ public class robot : Agent
         }
     }
 
-    public override float[] Heuristic()
-    {
-        var action = new float[2];
-        action[0] = Input.GetAxis("Horizontal");
-        action[1] = Input.GetAxis("Vertical");
-        return action;
-    }
+//    public override float[] Heuristic()
+   // {
+       // var action = new float[2];
+        //action[0] = Input.GetAxis("Horizontal");
+        //action[1] = Input.GetAxis("Vertical");
+        //return action;
+   // }
 }
